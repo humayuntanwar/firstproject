@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Facebook Login
+        </ion-title>
+  </ion-navbar>
+</ion-header>
+<!-- add button to  call loginto facebook action-->
+<ion-content padding>
+ <button ion-button full (click)="loginWithFB()">Login!</button>
+ <!-- show logged in user data to user including name email first name and photo-->
+ <ion-card *ngIf="userData">
+   <ion-card-header>{{ userData.username}}</ion-card-header>
+   <img [src]="userData.picture">
+   <ion-card-content>
+     <p>Email: {{userData.email}}</p>
+     <p>First Name: {{userData.first_name}}</p>
+   </ion-card-content>
+ </ion-card>
+</ion-content>
